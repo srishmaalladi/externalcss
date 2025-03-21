@@ -4,46 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="container mt-5">
 
-    <form class="feedback-form">
-        <h2>Feedback Form</h2>
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Feedback Form</h2>
+        <form>
+            <!-- Name (Optional) -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Name (Optional):</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
 
-        <!-- Name (Optional) -->
-        <label for="name">Name (Optional):</label>
-        <input type="text" id="name" name="name">
+            <!-- Email (Optional) -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email (Optional):</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
 
-        <!-- Email (Optional) -->
-        <label for="email">Email (Optional):</label>
-        <input type="email" id="email" name="email">
+            <!-- Phone (Optional) -->
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone (Optional):</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
 
-        <!-- Phone (Optional) -->
-        <label for="phone">Phone (Optional):</label>
-        <input type="tel" id="phone" name="phone">
+            <!-- Rating -->
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating (1-5):</label>
+                <select class="form-select" id="rating" name="rating">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Good</option>
+                    <option value="3">3 - Average</option>
+                    <option value="2">2 - Below Average</option>
+                    <option value="1">1 - Poor</option>
+                </select>
+            </div>
 
-        <!-- Rating -->
-        <label for="rating">Rating (1-5):</label>
-        <select id="rating" name="rating">
-            <option value="5">5 - Excellent</option>
-            <option value="4">4 - Good</option>
-            <option value="3">3 - Average</option>
-            <option value="2">2 - Below Average</option>
-            <option value="1">1 - Poor</option>
-        </select>
+            <!-- Questions Regarding Product/Service -->
+            <div class="mb-3">
+                <label for="questions" class="form-label">Any Questions Regarding Product or Service:</label>
+                <textarea class="form-control" id="questions" name="questions" rows="4"></textarea>
+            </div>
 
-        <!-- Questions Regarding Product/Service -->
-        <label for="questions">Any Questions Regarding Product or Service:</label>
-        <textarea id="questions" name="questions" rows="4"></textarea>
+            <!-- Additional Comments (Optional) -->
+            <div class="mb-3">
+                <label for="comments" class="form-label">Additional Comments (Optional):</label>
+                <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+            </div>
 
-        <!-- Additional Comments (Optional) -->
-        <label for="comments">Additional Comments (Optional):</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
 
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
-    </form>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
